@@ -1,0 +1,4 @@
+npx sequelize-cli seed:generate --name add-transportmodes
+
+# Run seeds
+npx sequelize-cli db:seed:all

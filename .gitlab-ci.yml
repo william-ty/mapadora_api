@@ -1,0 +1,33 @@
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - echo "running npm install"
+    - pwd
+    - node -v
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
+  only:
+    - develop
+
+deploy:
+  stage: deploy
+  script:
+    - cp ../.env .env 2> /dev/null || true
+    - cp ../config.json ./config/config.json 2> /dev/null || true
+    - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    - ". ~/.nvm/nvm.sh"
+    - nvm use 16.14.2
+    - pm2 delete acrobatt_api 2> /dev/null || true
+    - pm2 start app.js --name acrobatt_api
+  only:
+    - develop

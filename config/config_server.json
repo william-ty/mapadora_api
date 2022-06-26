@@ -1,0 +1,24 @@
+{
+    "development": {
+      "username": "acrobatt_user",
+      "password": "acrobatt2022",
+      "database": "acrobatt",
+      "host": "localhost",
+      "dialect": "postgres"
+    },
+    "test": {
+        "username": "acrobatt_user",
+        "password": "acrobatt2022",
+        "database": "acrobatt",
+        "host": "localhost",
+        "dialect": "postgres"
+    },
+    "production": {
+        "username": "acrobatt_user",
+        "password": "acrobatt2022",
+        "database": "acrobatt",
+        "host": "localhost",
+        "dialect": "postgres"
+    }
+  }
+  

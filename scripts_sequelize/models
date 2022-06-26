@@ -1,0 +1,3 @@
+npx sequelize-cli model:generate --name Element --attributes name:string,description:string,predicted_date:dateonly;
+npx sequelize-cli model:generate --name InterestPoint --attributes point:string,order:integer,id_element:integer;
+npx sequelize-cli model:generate --name TaskListTag --attributes name:string;
