@@ -36,9 +36,9 @@ https://sequelize.org/v7/manual/getting-started.html
 copier le fichier 'config/db.config_example.js' en 'config/db.config.js' et éditer les identifiants de bdd
 
 ## lancement du serveur node 
-`node run dev` (default 'node app.js' remplacé)
+`npm run dev` (default 'node app.js' remplacé)
 * Au lancement du serveur, node génére les données de la base à partir du schéma (pas de réinitialisation pour le moment de manière à ce que les enregistrements soient conservés.)
-`node run seed`
+`npm run seed`
 * Les données nécessaire au bon fonctionnement de la solution sont générées grâce aux seeders.
 
 # Routes CRUD sur points
